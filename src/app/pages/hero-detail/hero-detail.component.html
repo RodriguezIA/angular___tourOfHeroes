@@ -1,0 +1,33 @@
+<div class="hero" *ngIf="hero">
+    <h2>{{hero.alterego | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+        <label>hero name: 
+            <input [(ngModel)]="hero.alterego" placeholder="alterego">
+        </label>
+    </div>
+    <div>
+        <label>age: 
+            <input [(ngModel)]="hero.age" placeholder="age">
+          </label>
+    </div>
+    <div>
+        <label>Universe: 
+            <input [(ngModel)]="hero.universe" placeholder="universe">
+          </label>
+    </div>
+    <div>
+        <label>isAlive: 
+            <input [(ngModel)]="hero.isAlive" placeholder="isAlive">
+          </label>
+    </div>
+    
+    <button (click)="goBack()">go back</button>
+</div>
+
+
