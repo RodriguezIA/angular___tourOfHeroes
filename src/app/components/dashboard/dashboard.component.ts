@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../../interfaces/hero';
 import { HeroServiceService } from '../../services/hero-service.service';
@@ -11,14 +12,18 @@ export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
 
-  constructor(private _HeroService:HeroServiceService) { }
+  constructor(private _HeroService:HeroServiceService, private _location:Location) { }
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
   getHeroes(){
-    this._HeroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(0,3));
+    this._HeroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(0,5));
+  }
+
+  goBack(){
+    this._location.back();
   }
 
 }

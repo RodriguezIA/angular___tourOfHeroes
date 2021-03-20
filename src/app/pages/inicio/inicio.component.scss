@@ -1,36 +1,29 @@
 /* AppComponent's private CSS styles */
+.container{
+  padding: 25px;
+}
+
+nav{
+  margin-bottom: 30px;
+}
+
 h1 {
-    font-size: 2em;
-    padding: 2rem;
-    margin: 0.5rem;
-    text-align: center;
-    color: #255e7a;
-  }
-  h2 {
-    font-size: 2em;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  nav{
-    text-align:left;
-    padding: 1rem;
-    margin:0% 10%;
-  }
-  nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-  }
-  nav a:visited, a:link {
-    color: #334953;
-  }
-  nav a:hover {
-    color: #039be5;
-    background-color: #cfd8dc;
-  }
-  nav a.active {
-    color: #039be5;
-  }
+  margin-bottom: 0;
+}
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #3d3d3d;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+nav a.active {
+  background-color: black;
+}

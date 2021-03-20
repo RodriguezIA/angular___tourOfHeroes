@@ -3,6 +3,8 @@ import { Hero } from '../../interfaces/hero';
 import { listHeroes } from '../../data/dataHeroes';
 import { HeroServiceService } from '../../services/hero-service.service';
 import { MessageService } from 'src/app/services/message.service';
+import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -15,7 +17,11 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero:Hero;
 
-  constructor(private hs: HeroServiceService, private _messageService: MessageService) {
+  constructor(
+    private hs: HeroServiceService, 
+    private _messageService: MessageService,
+    private _location:Location
+    ) {
    }
 
   ngOnInit(): void {
@@ -30,6 +36,11 @@ export class HeroesComponent implements OnInit {
   //funciones de HeroService
   getHeroes(): void{
     this.hs.getHeroes().subscribe(heroes => this.heroes = heroes)
+  }
+
+  //funcion goBack()
+  goBack(){
+    this._location.back();
   }
 
 }

@@ -1,33 +1,25 @@
-<div class="hero" *ngIf="hero">
-    <h2>{{hero.alterego | uppercase}} Details</h2>
+<div class="container">
+  <div *ngIf="hero">
+    <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
+    <br>
     <div>
-      <label>name:
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-      </label>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
     </div>
+    <br>
     <div>
-        <label>hero name: 
-            <input [(ngModel)]="hero.alterego" placeholder="alterego">
-        </label>
+      <label for="hero-alterego">Hero alterego: </label>
+      <input id="hero-alterego" [(ngModel)]="hero.alterego" placeholder="Hero alterego"/>
     </div>
+    <br>
     <div>
-        <label>age: 
-            <input [(ngModel)]="hero.age" placeholder="age">
-          </label>
+      <label for="hero-age">Hero age: </label>
+      <input id="hero-age" [(ngModel)]="hero.age" placeholder="hero.age">
     </div>
-    <div>
-        <label>Universe: 
-            <input [(ngModel)]="hero.universe" placeholder="universe">
-          </label>
-    </div>
-    <div>
-        <label>isAlive: 
-            <input [(ngModel)]="hero.isAlive" placeholder="isAlive">
-          </label>
-    </div>
-    
+    <br>
     <button (click)="goBack()">go back</button>
+  </div>
 </div>
 
 
