@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroServiceService } from "../../services/hero-service.service";
+import { Hero } from '../../interfaces/hero';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
   title = 'Tour of Heroes';
+  heroes: Hero[];
 
 
-  constructor() { }
+  constructor(private heroService:HeroServiceService) { }
 
   ngOnInit(): void {
   }
